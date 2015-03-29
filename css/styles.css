@@ -1,0 +1,193 @@
+
+/* Small devices (tablets, 768px and up) */ 
+@media (min-width: 768px) {
+
+} 
+
+/* Medium devices (desktops, 992px and up) */ 
+@media (min-width: 992px) {
+
+} 
+
+/* Large devices (large desktops, 1200px and up) */ 
+@media (min-width: 1200px) {
+
+}
+
+body {
+	padding: 20px;
+}
+
+.baymax {
+	padding-top:20px;
+}
+
+.twitter {
+	padding-top:15px;
+  	
+}
+
+
+.prisons {
+	float:right;
+	width:40%;
+}
+
+
+.frontpages img {
+	width: 100%;
+}
+
+.ipt {
+	float:right;
+	width:40%;
+}
+
+.alan {
+	float:right;
+	width:40%;
+}
+
+.amritsar {
+	float:right;
+	width:40%;
+}
+
+.graphic {
+	width:80%;
+	padding:20px;
+}
+
+.mortality {
+	float:right;
+	width: 40%;
+}
+
+.tesco {
+	width: 90%;
+	padding-left: 70px;
+	padding-top:10px;
+}
+
+.frankland {
+	float:right;
+	width: 35%;
+	padding-top:20px;
+}
+
+.oldie {
+	width:30%;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+
+.gq {
+	width:20%;
+	padding-top:65px;
+}
+
+.cars {
+	float:left;
+	width:60%;
+}
+
+.twitter-feed {
+	text-align:center;
+}
+
+h1 {
+	text-align:center;
+	font-family:serif;
+	font-size:45px;
+	font-weight:bold;
+	color: black;
+	text-decoration:none;
+}
+
+h2 {
+	font-family:serif;
+	font-size:18px;
+}
+
+h3 {
+	font-family:serif;
+	font-size:20px;
+}
+
+p {
+	text-align:center;
+	font-family:serif;
+	font-size:25px;
+}
+
+.guardian {
+	font-family:serif;
+	font-size:16px;
+}
+
+div div div p {
+	text-align: left;
+	font-size:16px;
+}
+
+iframe {
+	width:100%;
+	border:none;
+}
+
+.exp {
+	float:right;
+}
+
+table {
+	padding:20px;
+	text-align:left;
+	width:80%;
+	font-family:serif;
+	font-size:16px;
+	background-color: #F6F4F3;
+	margin:0 auto;
+	border-radius:5px;
+}
+
+td,th {
+	padding:5px;
+}
+
+.me {
+	float:left;
+	height:35%;
+	width:22%;
+	padding-right:5px;
+}
+
+@media (max-width: 480px) {
+	.twitter {
+		margin-left:10px;
+	}
+	.me {
+		height:50%;
+		width:42%;
+	}
+
+	.alan {
+		width:50%;
+	}
+
+	.amritsar {
+		width:50%;
+	}
+
+	.mortality {
+	width: 60%;
+}
+
+	.cars {
+		width:60%;
+	}
+
+	table {
+		width:80%;
+	}
+
+}
