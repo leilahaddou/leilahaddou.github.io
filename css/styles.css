@@ -1,6 +1,13 @@
 
 /* Small devices (tablets, 768px and up) */ 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+	.ipt {
+		width:50%;
+	}
+
+	.amritsar {
+		width:50%;
+	}
 
 } 
 
@@ -184,6 +191,10 @@ td,th {
 
 	.cars {
 		width:60%;
+	}
+
+	.ipt {
+		width:50%;
 	}
 
 	table {
