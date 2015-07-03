@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neo4j Class Resources</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <style>
+    h1 {
+      text-align:center;
+      font-size: 50px;
+      font-family:Arial;
+    }
+
+    h2 {
+      text-align:center;
+      font-size:40px;
+      font-family:Arial;
+    }
+
+    p {
+      font-size:15px;
+    }
+
+    body{
+      background-color: white;
+    }
+
+    iframe{
+      text-align:center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 baymax">
+        <h1 class="header"><strong>Using Graph Databases for Investigative Jounalism</strong></h1>
+        <h2><strong>Neo4j Class Resources</strong></h2>
+                <h3><strong>Data for part one</strong></h3>
+                <ul>
+                <li><strong>CAA plane data: </strong><a href>https://raw.githubusercontent.com/leilahaddou/graph-data/master/CAA500.csv</li></a> 
+                <p>Register of private planes registered by the UK Civil Aviation Authority (first 500 only) Source: CAA</p></li>
+                <li><strong>To delete all nodes and relationships:</strong><br></p>
+                <code>MATCH (n)<br>
+                OPTIONAL MATCH (n)-[r]-()<br>
+                DELETE n,r;</li></code>
+                <br>
+                <li><strong>Political Donations: </strong><a href>https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv</a>
+                <p>Cash donations made to polticians and political party between January 2010 and June 2015. Source: PEF online</li>
+                </ul>
+                <h3><strong>Part two</strong></h3>
+                <li><strong>Cypher refcard:</strong> <a href>http://neo4j.com/docs/stable/cypher-refcard/</p></a></li>
+              </ul>
+                <h3><strong>Creating databases</strong></h3>
+                <p>Import from a CSV: <code>LOAD CSV WITH HEADERS FROM "xxxx.csv" AS line</code></p>
+                <p>To create a node: <code>CREATE (x:Label {property:Property})</code></p>
+                <p>To create a relationship: <code>CREATE (x)-[r:CONNECTED_TO]->(y)</code></p>  
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .container -->
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
