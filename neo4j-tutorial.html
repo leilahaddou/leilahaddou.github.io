@@ -137,40 +137,41 @@
       <p>Basically any dataset where the connections are key to the story you want to find. Who knows who? Who is lobbying who? etc. You might want to join multiple datasets together for more in-depth analysis.</p>
       <p>Neo4j was <a href="http://neo4j.com/blog/icij-hsbc-fraud-neo4j-linkurious/">used by the ICIJ </a>during their investigations into the Swiss leaks of HSBC bank account holders, which this tutorial is designed to give a baby level introduction to.</p><br>
       <h2><strong>Installing and starting Neo4j</strong></h2>
-      <p>To download and install Neo4j community edition visit <a href="">the Neo4j Download page</a> and follow the instrcutions. Mac users are recommended to <a href="https://journocoders.hackpad.com/Journocoders-November-2015-UULM1iGgm1z#:h=Installing-Neo4j-in-the-termin">install via homebrew in the terminal</a> instead.</p>
+      <p>To download and install Neo4j community edition visit <a href="http://neo4j.com/download/">the Neo4j Download page</a> and follow the instrcutions. Mac users are recommended to <a href="https://journocoders.hackpad.com/Journocoders-November-2015-UULM1iGgm1z#:h=Installing-Neo4j-in-the-termin">install via homebrew in the terminal</a> instead.</p>
       <h2><strong>Creating nodes and relationships</strong></h2>
       <p>Graph databases consist of three things: nodes, relationships and properties.
       <p>We'll start by learning how to create nodes and relationships, before we move on to build our political donation database where we will cover how to add the properties.</p>
 
-      <p>To make our nodes and relationships, we need to use a cypher command called <code>CREATE</code>. Then we need to tell it the properties of our node by giving it a label and a type and then a property (which goes within curly brackets <code>{}</code>).</p>
+      <p>Open Neo4j, choose a database (The one created automatically, <i>default.graphdb</i>, will do) and click "Start". Then go to [http://localhost:7474/browser/](http://localhost:7474/browser/) in your browser. If you need to, type <i>:server connect</i> into the white box at the top and press the "play" button on the right. Log in to the database with the default username/password (neo4j/neo4j). Set a new password; it doesn't need to be anything complex.</p>
+      <p>Now we are set up. To make our nodes and relationships, we need to use a cypher command called <code>CREATE</code>. Then we need to tell it the properties of our node by giving it a label and a type and then a property (which goes within curly brackets <code>{}</code>).</p>
       <p>You write the code in the top white area of the Neo4j page.</p>
       <img class="well-sizeimage" src="neo4jpage.png">
+      <p>This is the general structure of code needed for creating a new node. Don't paste it in, it's just for an example!</p>
       <p><em>Click on the code for a more detailed explanation</em></p>
       <div class="row">
         <div class="col-md-10 col-md-offset-1 codebox">
           <div class="row">
             <div class="col-xs-6 ann1">
-              <p class="annotation" id="well1label1">The letter at the start of the code is assigning a shortcut label to my node. It doesn't have to be a letter, it can be anything you want!</p>
+              <p class="annotation" id="well1label1">The letter at the start of the code ("x") is assigning a shortcut label to my node. It doesn't have to be a letter, it can be anything you want!</p>
             </div>
             <div class="col-xs-6 ann2">
               <p class="annotation" id="well1label2">The property (in lower case) is what I am calling a certain attribute I want to assign to that node. It could be a name, an age, a reference number dependent on the dataset you are using. You decide what to call it.</p>
             </div>
           </div>
           <div id="well1" class="well well-lg">
-            <code id-"examplecode"="">CREATE (x:Label {property:Property})</code>
+            <code id-"examplecode"="">CREATE (x:Label {property:"Value"})</code>
           </div>
           <div class="row">
             <div class="col-xs-6 ann3">
               <p class="annotation" id="well1label3">The Label is assigning a type to your node. It might be a person, an object, a place according to your dataset.</p>
             </div>
             <div class="col-xs-6 ann4">
-              <p class="annotation" id="well1label4">The second Property (Uppercased) is the value of my property. For instance, if it was a name, I might put the value as "Leila Haddou". We'll see this in action in a moment. </p>
+              <p class="annotation" id="well1label4">The "Value" is the value of my property. For instance, if it was a name, I might put the value as "Leila Haddou". We'll see this in action in a moment. </p>
             </div>
           </div>
         </div>
       </div>
-      <p>So let's build two nodes - one with your name and one that says where you are tonight.</p><br>
-      <p>* To go into multiline mode you need to hold down shift + enter.</p><br>
+      <p>So let's build two nodes - one representing you and one for the event where you are tonight. Copy and paste this into the white space at the top of the interface. To go into multiline mode you need to hold down shift + enter.</p><br>
       <p><em>Click on the code for a more detailed explanation</em></p>
       <div class="row">
         <div class="col-md-10 col-md-offset-1 codebox">
@@ -196,7 +197,7 @@
           </div>
         </div>
       </div>
-      <p>We haven't yet told Neo4j that the two are related in some way which we'll define now. We use <code>CREATE</code> again, but this time we are just going to use our shortcut labels <code>(l)</code> and <code>(j)</code>. We've already told neo4j the labels, types and properties of the nodes earlier.</p><br>
+      <p>We haven't yet told Neo4j that the two are related, so we'll define that now. We use <code>CREATE</code> again, but this time we are just going to use our shortcut labels <code>(l)</code> and <code>(j)</code>. We've already told neo4j the labels, types and properties of the nodes earlier.</p><br>
       <p>Add the relationship below the two lines to create your node.</p>
       <p><em>Click on the code for a more detailed explanation</em></p>
       <div class="row">
@@ -210,7 +211,7 @@
             </div>
           </div>
           <div id="well3" class="well well-lg">
-            <code id-"examplecode"="">CREATE (l)-[IS_AT]-&gt;(j)</code>
+            <code id-"examplecode"="">CREATE (l)-[r:IS_AT]-&gt;(j)</code>
           </div>
           <div class="row">
             <div class="col-xs-6 ann3">
@@ -223,8 +224,9 @@
         </div>
       </div>
       <p>Now hit the play button on the top right<img id-"playbutton" src="playbutton.png"></p><br>
-      <p>Neo4j will now tell you that it has successfully created 2 nodes and 1 relationship. If you click on the three bubbles in the top left corner of the screen, it will open up into a sidebar. At the top you'll see an area called "Node Labels" which will now have the words 'Person' and 'Event' below it. Click on one of them.</p>
-      <p>You'll see the node appear in the centre of the screen. Double click it to show the relationships attached to it.</p><br>
+      <p>Neo4j should have now told you that it has successfully created 2 nodes and 1 relationship.</p>
+      <p>Let's now visualise this dataset. If you click on the "three bubbles" icon in the top left corner of the screen, it will open up a sidebar. At the top you'll see an area called "Node Labels" which will now have the words 'Person' and 'Event' below it. Click on 'Person'.</p>
+      <p>You'll see a node appear in the centre of the screen. <b></b>Double click it</b> to show the relationships attached to it.</p><br>
       <img class="well-sizeimage" src="noderel.png" alt="Node-Relationship"><br>
       <p>Of course, in the real world we are unlikely to be building our databases from scratch - it would take forever! Until recently, you needed to a developer to even get the data into Neo4j. Now they've included a <code>LOAD CSV</code> function which means we can load the data in from a standard CSV. </p>
       <h2><strong>Building a political donation database</strong></h2>
