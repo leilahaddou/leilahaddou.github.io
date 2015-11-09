@@ -127,7 +127,7 @@
       <img class="titleimage"src="titleimage.png">
       <h2><strong>What is a graph database?</strong></h2>
       <p>In data journalism, we tend to use relational database - data in table form - such as excel or Google docs or SQL, to do our analysis and find stories.</p>
-      <p>Graph databases are incredibly useful tools to find the connections or patterns within our data that would be difficult, if not impossible, to spot using a relational database. It could be used for:</p>
+      <p>Graph databases are different, but they are incredibly useful tools to find connections or patterns within our data that would be difficult, if not impossible, to spot using a relational database. It could be used for:</p>
       <ul>
         <li><p>Examining social networks</p></li>
         <li><p>Tracking the flow of money</p></li>
@@ -141,7 +141,10 @@
       <h2><strong>Creating nodes and relationships</strong></h2>
       <p>Graph databases consist of three things: nodes, relationships and properties.
       <p>We'll start by learning how to create nodes and relationships, before we move on to build our political donation database where we will cover how to add the properties.</p>
+
       <p>To make our nodes and relationships, we need to use a cypher command called <code>CREATE</code>. Then we need to tell it the properties of our node by giving it a label and a type and then a property (which goes within curly brackets <code>{}</code>).</p>
+      <p>You write the code in the top white area of the Neo4j page.</p>
+      <img class="well-sizeimage" src="neo4jpage.png">
       <p><em>Click on the code for a more detailed explanation</em></p>
       <div class="row">
         <div class="col-md-10 col-md-offset-1 codebox">
@@ -266,8 +269,9 @@
       <p class="half right">Using <code>CREATE</code> will tell me no more than I could see in a CSV file. It doesn't tell that the same person might have donated multiple times or to multiple entities.</p>
       <img class="half" src="polwrong.png">
       <p>Instead of <code>CREATE</code> we are going to use <code>MERGE</code>. <code>MERGE</code> will go through each line of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one, such as a politician's name for instance, and create a node for it. If it doesn't find a duplicate, it will create a new node for that datapoint anyway. For those familiar with Open Refine or De-dupe, it's a similar concept.</p><br>
-      <p class="half right">Now with <code>MERGE</code> I can see a much more complete picture of the connections within my data.</p>
-      <img class="half" src="polright.png">
+      <p class="half right">Now with <code>MERGE</code> I can see a much more complete picture of the connections within my data.</p><br>
+      <img class="half" src="polright.png"><br>
+      <br>
       <p>Let's substitute the <code>CREATE</code> for <code>MERGE</code> and add it to our load csv command.</p>
       <p>Note also, that because we are bringing our data in from a CSV file, we need to add <code>line.</code> before our value so Neo4j knows where to bring the data in from.</p>
       <div class="row">
@@ -305,32 +309,12 @@
       <br>
       <h2><strong>Putting it all together</strong></h2>
       <p>Let's now put all of that together and make our database!</p>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 codebox">
-          <div class="row">
-            <div class="col-xs-6 ann1">
-              <p class="annotation" id="well6label1">This is a note to explain this thing</p>
-            </div>
-            <div class="col-xs-6 ann2">
-              <p class="annotation" id="well6label2">This is a note to explain this thing</p>
-            </div>
-          </div>
           <div id="well6" class="well well-lg">
             <code id="examplecode">LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv" AS line</code><br>
             <code>MERGE (r:Recipient {recipientName: line.EntityName})</code><br>
             <code>MERGE (d:Donor {donorName: line.DonorName, donorStatus: line.DonorStatus})</code><br>
             <code>CREATE (d)-[:DONATED_TO {ref: line.ECRef, amount: line.Value, date: line.ReceivedDate}]->(r)</code><br>
           </div>
-          <div class="row">
-            <div class="col-xs-6 ann3">
-              <p class="annotation" id="well6label3">This is a note to explain this thing</p>
-            </div>
-            <div class="col-xs-6 ann4">
-              <p class="annotation" id="well6label4">This is a note to explain this thing</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <p>Check your code looks the same and then hit the play button <img src="playbutton.png"></p>
       <p>It will take a few minutes to run as it is going through every line and checking for duplicates before creating the nodes and relationships.</p>
       <p>Go back to your side bar and click on one of your newly created labels. You can change the size and colours for easier viewing if you like.</p>
@@ -362,8 +346,8 @@
 
       <h2><strong>Some extra things to be aware of</strong></h2>
       <ul>
-        <li><p><strong>Spaces</strong>Try not have spaces in your CSV headers if possible, it can confuse Neo4j.
-        <li><p><strong>Numbers</strong>If your query involves any numbers you might need to use, you need to tell Neo4j at the loading stage that the cell contains an integer.</p></li>
+        <li><p><strong>Spaces</strong> Try not have spaces in your CSV headers if possible, it can confuse Neo4j.
+        <li><p><strong>Numbers</strong> If your query involves any numbers you might need to use, you need to tell Neo4j at the loading stage that the cell contains an integer.</p></li>
         <p>An example might be the amount in a political donation. When loading in a value, it would need to say <code>toInt(amount: line.Value)</code>.</p>
         <p>Also refer to the refCard and website for information on dealing with dates.</p>
       </ul>
