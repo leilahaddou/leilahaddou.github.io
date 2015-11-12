@@ -30,12 +30,14 @@ var annotationList = [
 ]
 
 annotationList.forEach(function (a) {
-	a.annotations.forEach(function (annotation) {
-		document.querySelector(annotation).style.display = 'none'
-	})
-	document.querySelector(a.well).addEventListener('click', function () {
+    var btn = $('<div class="btn btn-default" style="float: right;">Show/hide annotations</div>')
+    $(a.well).after(btn);
+    btn.click(function(){
 		a.annotations.forEach(function (annotation) {
 			document.querySelector(annotation).style.display = document.querySelector(annotation).style.display === '' ? 'none' : ''
 		})
+    })
+	a.annotations.forEach(function (annotation) {
+		document.querySelector(annotation).style.display = 'none'
 	})
 })
