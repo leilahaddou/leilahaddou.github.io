@@ -1,204 +1,45 @@
-
-/* Small devices (tablets, 768px and up) */ 
-@media (max-width: 768px) {
-	.ipt {
-		width:50%;
-	}
-
-	.amritsar {
-		width:50%;
-	}
-
-} 
-
-/* Medium devices (desktops, 992px and up) */ 
-@media (min-width: 992px) {
-
-} 
-
-/* Large devices (large desktops, 1200px and up) */ 
-@media (min-width: 1200px) {
-
-}
-
 body {
-	padding: 20px;
+	font-size: 18px;
 }
 
-.baymax {
-	padding-top:20px;
+.btn-social {
+	border-radius: 50%;
+	padding: 18px 20px;
+	color: white;
 }
 
-.twitter {
-	padding-top:15px;
-  	
+.btn-social:hover {
+	color: white;
 }
 
-
-.prisons {
-	float:right;
-	width:40%;
+.btn-email {
+	background: #767676;
 }
 
-
-.frontpages img {
-	width: 100%;
+.btn-email:hover {
+	background: #5d5d5d;
 }
 
-.ipt {
-	float:right;
-	width:40%;
+.btn-linkedin {
+	background: #0071a1;
 }
 
-.alan {
-	float:right;
-	width:40%;
+.btn-linkedin:hover {
+	background: #004d6e;
 }
 
-.amritsar {
-	float:right;
-	width:40%;
+.btn-twitter {
+	background: #33ccff;
 }
 
-.graphic {
-	width:80%;
-	padding:20px;
+.btn-twitter:hover {
+	background: #028dbc;
 }
 
-.mortality {
-	float:right;
-	width: 40%;
+.btn-github {
+	background: #444;
 }
 
-.tesco {
-	width: 90%;
-	padding-left: 70px;
-	padding-top:10px;
-}
-
-.frankland {
-	float:right;
-	width: 35%;
-	padding-top:20px;
-}
-
-.oldie {
-	width:30%;
-	padding-bottom:20px;
-	padding-top:20px;
-}
-
-.gq {
-	width:20%;
-	padding-top:65px;
-}
-
-.cars {
-	float:left;
-	width:60%;
-}
-
-.twitter-feed {
-	text-align:center;
-}
-
-h1 {
-	text-align:center;
-	font-family:serif;
-	font-size:45px;
-	font-weight:bold;
-	color: black;
-	text-decoration:none;
-}
-
-h2 {
-	font-family:serif;
-	font-size:18px;
-}
-
-h3 {
-	font-family:serif;
-	font-size:20px;
-}
-
-p {
-	text-align:center;
-	font-family:serif;
-	font-size:25px;
-}
-
-.guardian {
-	font-family:serif;
-	font-size:16px;
-}
-
-div div div p {
-	text-align: left;
-	font-size:16px;
-}
-
-iframe {
-	width:100%;
-	border:none;
-}
-
-.exp {
-	float:right;
-}
-
-table {
-	padding:20px;
-	text-align:left;
-	width:80%;
-	font-family:serif;
-	font-size:16px;
-	background-color: #F6F4F3;
-	margin:0 auto;
-	border-radius:5px;
-}
-
-td,th {
-	padding:5px;
-}
-
-.me {
-	float:left;
-	height:35%;
-	width:22%;
-	padding-right:5px;
-}
-
-@media (max-width: 480px) {
-	.twitter {
-		margin-left:10px;
-	}
-	.me {
-		height:50%;
-		width:42%;
-	}
-
-	.alan {
-		width:50%;
-	}
-
-	.amritsar {
-		width:50%;
-	}
-
-	.mortality {
-	width: 60%;
-}
-
-	.cars {
-		width:60%;
-	}
-
-	.ipt {
-		width:50%;
-	}
-
-	table {
-		width:80%;
-	}
-
+.btn-github:hover {
+	background: #222;
 }

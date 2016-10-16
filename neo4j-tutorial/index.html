@@ -1,0 +1,416 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neo4j Tutorial</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+  @media (max-width: 768px) {
+    img {
+      width:70%;
+    }
+
+    .well {
+      margin-right:2px;
+      margin-left:2px;
+    }
+
+  } 
+
+  /* Medium devices (desktops, 992px and up) */ 
+  @media (min-width: 992px) {
+
+  } 
+
+  /* Large devices (large desktops, 1200px and up) */ 
+  @media (min-width: 1200px) {
+
+  }
+
+  h1 {
+    text-align:center;
+    font-size: 35px;
+    font-family: "Arial";
+  }
+
+  h2 {
+    font-size:20px;
+    font-family: "Arial";
+  }
+
+  p {
+    font-size:16px;
+    font-family: "Arial";
+    text-align:left;
+  }
+
+  body{
+    background-color: white;
+  }
+
+  .well-sizeimage {
+    width:550px;
+    position:center;
+    margin-left:180px;
+  }
+
+  .half {
+    width: 50%;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .titleimage {
+    width:550px;
+    position:center;
+    margin-left:180px;
+  }
+
+  code {
+    font-size: 16px;
+    text-align:center;
+    position:center;
+  }
+
+  .annbox {
+    border:solid black;
+  }
+
+  .well {
+    margin-right:100px;
+    margin-left:100px;
+    position:center;
+  }
+
+  #examplecode {
+    text-align: center;
+    position:center;
+  }
+
+  .annotation {
+    font-family: "Georgia";
+    font-style: italic;
+  }
+
+  #well1label1, #well2label1, #well3label1, #well4label1 {
+    color:red;
+  }
+
+  #well1label2, #well2label2, #well4label2 {
+    color:blue;
+  }
+
+  #well1label3, #well2label3, #well4label3 {
+    color:green;
+  }
+
+  #well1label4, #well2label4, #well3label4 {
+    color:orange;
+  }
+
+  #playbutton {
+    width:10px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Exploring networks with graph databases<br><small>A journalists' introduction to Neo4j</small></h1>
+    </div>
+    <div class="col-md-10 col-md-offset-1 baymax">
+      <img class="titleimage"src="titleimage.png">
+      <h2><strong>What is a graph database?</strong></h2>
+      <p>In data journalism, we tend to use relational database - data in table form - such as excel or Google docs or SQL, to do our analysis and find stories.</p>
+      <p>Graph databases are different, but they are incredibly useful tools to find connections or patterns within our data that would be difficult, if not impossible, to spot using a relational database. It could be used for:</p>
+      <ul>
+        <li><p>Examining social networks</p></li>
+        <li><p>Tracking the flow of money</p></li>
+        <li><p>Examining corporate structures</p></li>
+        <li><p>Football or sporting transfers</p></li>
+      </ul> 
+      <p>Basically any dataset where the connections are key to the story you want to find. Who knows who? Who is lobbying who? etc. You might want to join multiple datasets together for more in-depth analysis.</p>
+      <p>Neo4j was <a href="http://neo4j.com/blog/icij-hsbc-fraud-neo4j-linkurious/">used by the ICIJ </a>during their investigations into the Swiss leaks of HSBC bank account holders, which this tutorial is designed to give a baby level introduction to.</p><br>
+      <h2><strong>Installing and starting Neo4j</strong></h2>
+      <p>To download and install Neo4j community edition visit <a href="http://neo4j.com/download/">the Neo4j Download page</a> and follow the instrcutions. Mac users are recommended to <a href="https://journocoders.hackpad.com/Journocoders-November-2015-UULM1iGgm1z#:h=Installing-Neo4j-in-the-termin">install via homebrew in the terminal</a> instead.</p>
+      <h2><strong>Creating nodes and relationships</strong></h2>
+      <p>Graph databases consist of three things: nodes, relationships and properties.
+      <p>We'll start by learning how to create nodes and relationships, before we move on to build our political donation database where we will cover how to add the properties.</p>
+
+      <p>Open Neo4j, choose a database (The one created automatically, <i>default.graphdb</i>, will do) and click "Start". Then go to [http://localhost:7474/browser/](http://localhost:7474/browser/) in your browser. If you need to, type <i>:server connect</i> into the white box at the top and press the "play" button on the right. Log in to the database with the default username/password (neo4j/neo4j). Set a new password; it doesn't need to be anything complex.</p>
+      <p>Now we are set up. To make our nodes and relationships, we need to use a cypher command called <code>CREATE</code>. Then we need to tell it the properties of our node by giving it a label and a type and then a property (which goes within curly brackets <code>{}</code>).</p>
+      <p>You write the code in the top white area of the Neo4j page.</p>
+      <img class="well-sizeimage" src="neo4jpage.png">
+      <p>This is the general structure of code needed for creating a new node. Don't paste it in, it's just for an example!</p>
+      <p><em>Click on the button below for a more detailed explanation</em></p>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 codebox">
+          <div class="row">
+            <div class="col-xs-6 ann1">
+              <p class="annotation" id="well1label1">The letter at the start of the code ("x") is assigning a shortcut label to my node. It doesn't have to be a letter, it can be anything you want!</p>
+            </div>
+            <div class="col-xs-6 ann2">
+              <p class="annotation" id="well1label2">The property (in lower case) is what I am calling a certain attribute I want to assign to that node. It could be a name, an age, a reference number dependent on the dataset you are using. You decide what to call it.</p>
+            </div>
+          </div>
+          <div id="well1" class="well well-lg">
+            <code id-"examplecode"="">CREATE (x:Label {property:"Value"})</code>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 ann3">
+              <p class="annotation" id="well1label3">The Label is assigning a type to your node. It might be a person, an object, a place according to your dataset.</p>
+            </div>
+            <div class="col-xs-6 ann4">
+              <p class="annotation" id="well1label4">The "Value" is the value of my property. For instance, if it was a name, I might put the value as "Leila Haddou". We'll see this in action in a moment. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>So let's build two nodes - one representing you and one for the event where you are tonight. Copy and paste this into the white space at the top of the interface. To go into multiline mode you need to hold down shift + enter.</p><br>
+      <p><em>Click on the button below for a more detailed explanation</em></p>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 codebox">
+          <div class="row">
+            <div class="col-xs-6 ann1">
+              <p class="annotation" id="well2label1">I've chosen to use 'l' and 'j' as my shortcut labels to stand for Leila and Journocoders</p>
+            </div>
+            <div class="col-xs-6 ann2">
+              <p class="annotation" id="well2label2">My properties in this case are 'name' and 'eventTitle' to describe the type of data I'm bringing in from a CSV column.</p>
+            </div>
+          </div>
+          <div id="well2" class="well well-lg">
+            <code id-"examplecode"="">CREATE (l:Person {name:"Leila Haddou"})</code><br>
+            <code id-"examplecode"="">CREATE (j:Event {eventTitle:"Journocoders"})</code>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 ann3">
+              <p class="annotation" id="well2label3">The 'Person' or 'Event' is assigning the label or type to my node.</p>
+            </div>
+            <div class="col-xs-6 ann4">
+              <p class="annotation" id="well2label4">The text within quote marks is my value or what would be the content of a cell in a CSV or spreadsheet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>We haven't yet told Neo4j that the two are related, so we'll define that now. We use <code>CREATE</code> again, but this time we are just going to use our shortcut labels <code>(l)</code> and <code>(j)</code>. We've already told neo4j the labels, types and properties of the nodes earlier.</p><br>
+      <p>Add the relationship below the two lines to create your node.</p>
+      <p><em>Click on the button below for a more detailed explanation</em></p>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 codebox">
+          <div class="row">
+            <div class="col-xs-6 ann1">
+              <p class="annotation" id="well3label1">The relationship is written in square brackets in the centre. Spaces between words must have _ between them.</p>
+            </div>
+            <div class="col-xs-6 ann2">
+              <p class="annotation" id="well3label2"></p>
+            </div>
+          </div>
+          <div id="well3" class="well well-lg">
+            <code id-"examplecode"="">CREATE (l)-[r:IS_AT]-&gt;(j)</code>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 ann3">
+              <p class="annotation" id="well3label3"></p>
+            </div>
+            <div class="col-xs-6 ann4">
+              <p class="annotation" id="well3label4">Top tip: Notice how similar the code looks to the diagram we are building? This is a good way to remember the syntax!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Now hit the play button on the top right<img id-"playbutton" src="playbutton.png"></p><br>
+      <p>Neo4j should have now told you that it has successfully created 2 nodes and 1 relationship.</p>
+      <p>Let's now visualise this dataset. If you click on the "three bubbles" icon in the top left corner of the screen, it will open up a sidebar. At the top you'll see an area called "Node Labels" which will now have the words 'Person' and 'Event' below it. Click on 'Person'.</p>
+      <p>You'll see a node appear in the centre of the screen. <b></b>Double click it</b> to show the relationships attached to it.</p><br>
+      <img class="well-sizeimage" src="noderel.png" alt="Node-Relationship"><br>
+      <p>Of course, in the real world we are unlikely to be building our databases from scratch - it would take forever! Until recently, you needed to a developer to even get the data into Neo4j. Now they've included a <code>LOAD CSV</code> function which means we can load the data in from a standard CSV. </p>
+      <h2><strong>Building a political donation database</strong></h2>
+      <p>So let's build a graph database of political donations. The data we'll be using is<a href="https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv"> cash donations</a> made between January 2010 and June 2015 from PEF online.</p><br>
+      <p>From this, I want to turn the raw CSV data into a graph database which shows me the donors and recipients as nodes and the relationship between them but keeps the other details such as the donation amount, dates, etc. as properties within the database.</p><br>
+      <img class="half" src="polcsv.png"><img class="half" src="polgraph.png">
+      <br>
+      <br>
+      <p>Keeping in mind that both nodes and relationships can have properties, this is the data model I want to create:</p><br>
+      <img class="well-sizeimage" src="polmodel.png">
+      <p>It's a good idea to draw up a graph model before building a graph database.</p>
+      <h2><strong>Loading the data</strong></h2><br>
+      <p>The first thing we want to do is load the data in from a CSV file. Today we'll be using data hosted on a URL <em><a href="https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv">"https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv"</em></a>.</p><br>
+      <p>But we could just as easily use a file from a computer by loading in a file path like so: <em>file:///Users/leilahaddou/Documents/Graphdata/pef.csv</em>.</p><br>
+      <p>* Windows users should be aware that they will need to change the backslashes in file paths to forward slashes for Neo4j to read them.</p><br>
+      <p>Type the following code into the Cypher box at the top of the page. (Don't run it yet!)</p>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 codebox">
+          <div class="row">
+            <div class="col-xs-6 ann1">
+              <p class="annotation" id="well4label1">Loading the CSV 'with headers' brings in the title row of your file. I can't think of an occasion where you would not want to do this.</p>
+            </div>
+            <div class="col-xs-6 ann2">
+              <p class="annotation" id="well4label2">Give the full file path or URL within quotes to load the data in.</p>
+            </div>
+          </div>
+          <div id="well4" class="well well-lg">
+            <code id-"examplecode"="">LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv" AS line</code>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 ann3">
+              <p class="annotation" id="well4label3">AS line - we are telling Neo4j that we are going to be bringing in specific data from this file. Soon we'll be bringing in columns of data from the CSV by using 'line.ColumnName'.</p>
+            </div>
+            <div class="col-xs-6 ann4">
+              <p class="annotation" id="well4label4"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2><strong>Using Merge</strong></h2>
+      <p>Remember when we first built our nodes we used the <code>CREATE</code> command. This tells Neo4j to blindly create a node for us. In this, and a lot of other datasets the same thing or name might appear several times. In other words, duplicates!</p><br>
+      <p class="half right">Using <code>CREATE</code> will tell me no more than I could see in a CSV file. It doesn't tell that the same person might have donated multiple times or to multiple entities.</p>
+      <img class="half" src="polwrong.png">
+      <p>Instead of <code>CREATE</code> we are going to use <code>MERGE</code>. <code>MERGE</code> will go through each line of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one, such as a politician's name for instance, and create a node for it. If it doesn't find a duplicate, it will create a new node for that datapoint anyway. For those familiar with Open Refine or De-dupe, it's a similar concept.</p><br>
+      <p class="half right">Now with <code>MERGE</code> I can see a much more complete picture of the connections within my data.</p><br>
+      <img class="half" src="polright.png"><br>
+      <br>
+      <p>Let's substitute the <code>CREATE</code> for <code>MERGE</code> and add it to our load csv command.</p>
+      <p>Note also, that because we are bringing our data in from a CSV file, we need to add <code>line</code> before our value so Neo4j knows where to bring the data in from. (Again, don't run this just yet.)</p>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 codebox">
+          <div class="row">
+            <div class="col-xs-6 ann1">
+              <p class="annotation" id="well5label1">Loading WITH HEADERS brings in the title row of the CSV file. I can't think of an occasion where you would not want to do this! </p>
+            </div>
+            <div class="col-xs-6 ann2">
+              <p class="annotation" id="well5label2">The 'line.' tells Neo4j what to bring in from the CSV. </p>
+            </div>
+          </div>
+          <div id="well5" class="well well-lg">
+            <code id-"examplecode"="">LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv" AS line</code><br>
+            <code id-"examplecode"="">MERGE (r:Recipient {recipientName: line.EntityName}) </code><br>
+            <code id-"examplecode"="">MERGE (d:Donor {donorName: line.DonorName})</code>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 ann3">
+              <p class="annotation" id="well5label3"></p>
+            </div>
+            <div class="col-xs-6 ann4">
+              <p class="annotation" id="well5label4">/p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2><strong>Adding properties</strong></h2><br>
+      <p>So far we have taken care of loading the data and creating our nodes. The CSV file has extra data in it that I don't want to view as a node, but want to be able to retrieve or use when querying my data.</p><br>
+      <p>We already know how to add properties - <code>{recipientName: line.EntityName}</code>. To add multiple properties, do the same within the brackets separated by a comma like so: <code>{donorName: line.DonorName, donorStatus: line.DonorStatus}</code></p>
+      <p>Don't forget both nodes and relationships can have properties. In line with the data model I created earlier, I am going to add three properties to my relationship.</p>
+      <div id="well6" class="well well-lg">
+        <code>CREATE (d)-[:DONATED_TO {ref: line.ECRef, amount: line.Value, date: line.ReceivedDate}]->(r)</code>.</p>
+      </div>
+      <br>
+      <h2><strong>Putting it all together</strong></h2>
+      <p>Let's now put all of that together and make our database!</p>
+          <div id="well6" class="well well-lg">
+            <code id="examplecode">LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv" AS line</code><br>
+            <code>MERGE (r:Recipient {recipientName: line.EntityName})</code><br>
+            <code>MERGE (d:Donor {donorName: line.DonorName, donorStatus: line.DonorStatus})</code><br>
+            <code>CREATE (d)-[:DONATED_TO {ref: line.ECRef, amount: line.Value, date: line.ReceivedDate}]->(r)</code><br>
+          </div>
+      <p>Check your code looks the same and then hit the play button <img src="playbutton.png"></p>
+      <p><b>It may take several minutes to run</b> depending on the speed of your computer as it is going through every line and checking for duplicates before creating the nodes and relationships.</p>
+      <p>Once done, open the sidebar again (with the 'bubbles' icon) and click on the newly-created 'Donor' label. Double click on one of the circles.</p>
+      <p>If you like, you can change the size and colours for easier viewing by clicking on the coloured 'pills' at the top that say 'Donor' and 'Recipient'.</p>
+      
+      <img class="titleimage" src="changesize.png">
+      
+      <p>Not bad for only four lines of Cypher!</p>
+      <h2><strong>Basic queries in Neo4j</strong></h2>
+      <p>So we have our data loaded into Neo4j. You may have noticed than when you click a label in the side bar it brings back a random 25 nodes for you to view. To do more specific searches, we need to know how to query the data.</p><br>
+      <p>Neo4j is extremely powerful and can be used for really complex queries. This <a href="http://neo4j.com/docs/stable/cypher-refcard/"><strong>Cypher refcard</strong></a> will help you get to grips with the basics, but for now, here are a couple of examples to get you started.</p>
+      <p>All queries begin with <code>MATCH</code> and end with <code>RETURN</code> (otherwise it will execute the query but not show you the result!). To search for certain conditions, we use the <CODE>WHERE</CODE> command.</p>
+      <p>A straightforward query would look something like this: <code>MATCH x WHERE x.recipientName ="Caroline Lucas"</code>. In other words, Match something where the recipient name is Caroline Lucas. 
+      <p>But because this is data I've downloaded directly from PEF Online, which has many inconsistencies in names (such as Dr, The Right Honourable, The Right Hon, MP) I am going to use a fuzzy match.</p>
+        <p>Let's amend our Cypher query to find Caroline Lucas, adding <code>=~</code> and <code>.*</code>s to make it fuzzy:</p> 
+      <div id="well6" class="well well-lg">
+            <code id="examplecode"="">MATCH r WHERE r.recipientName =~ ".*Caroline Lucas.*"</code><br> 
+            <code>RETURN r</code>
+      </div>
+      <p>This time she appears! Double-click on her to see her donors. Then try to find some other MPs such as Tom Watson, David Lammy, Mark Reckless and Tessa Jowell. Or try to find some of the donors for extra practice.</p><br>
+      <p>The Cypher query is saying "Match something where the recipient name is equal to or approximately Caroline Lucas". The .* on either side makes the match fuzzy, so we could equate that as a way of saying 'contains'. You can use this for a portion of a name or select letters to make it even fuzzier.</p><br>
+      <p>* Remember if you are searching for your local MP or the prime minister that we have only loaded a small portion of the data. You can build the full thing by downloading all donations from the website.</p><br>
+      <p>Say we want to search for a specific type of donor such as a company. We named the property 'donorStatus' when setting up our database. So the code would be as follows:</p><br>
+      <div id="well6" class="well well-lg">
+            <code id="examplecode"="">MATCH d WHERE d.donorStatus = "Company"</code><br> 
+            <code>RETURN d</code><br>
+            <code>LIMIT 25</code>
+      </div>
+      <p>The search is only looking for companies that have made political donations. I've chosen to call my 'something' d for donor - but it doesn't matter what letter you choose as long as you are consistent in the query.</p>
+      <p>There are rather a lot of companies so I've chosen to <code>LIMIT</code> the number of results that come back.</p><br>
+      <p>If you want to add more than one criteria, you would start with <code>AND</code> on the next line. i.e. find me a donor who has given to both Labour and the Conservatives. Or I might want to search for donors who are companies and have given over a certain amount of money.</p>
+      <p>A good way to practice is using the <a href="http://neo4j.com/docs/stable/cypher-refcard/">Cypher refcard</a> mentioned earlier.</p><br>
+      
+      <p>Congratulations, you've completed the tutorial! You now know how to import and query a large dataset using Neo4j.</p>
+
+      <h2><strong>Something to try at home!</strong></h2>
+      <p>If you want to have a go at building another graph database from scratch, this is a link to a tiny portion of the plane ownership database held by the Civil Aviation Authority: </strong><a href="https://raw.githubusercontent.com/leilahaddou/graph-data/master/CAA500.csv">CAA500.csv</strong></a></p><br>
+      <p>Try to make a model showing planes and their owners and add the extra attributes.</p>
+      <h2><strong>Further resources</strong></h2>
+      <ul>
+        <li><p>Both Neo4j itself and the <a href="http://neo4j.com/docs/stable/tutorials.html">Neo4j website</a> feature tutorials</p></li>
+        <li><p>There are also weekly <a href="http://www.meetup.com/graphdb-london/">Neo4j meetups</a> in London</p></li>
+        <li><p>A number of free downloadable ebooks can be found <a href="http://neo4j.com/books/"> here</a></p></li>
+        <li><p>The <a href="https://linkurio.us/visualizing-the-ties-between-big-pharmas-and-doctors-in-france/">Linkurio.us blog</a> has some good examples of how journalists have used graph databases</p></li>
+      </ul>
+
+      <h2><strong>PS - some extra things to be aware of:</strong></h2>
+      <ul>
+        <li><p><strong>Spaces</strong> Try not have spaces in your CSV headers if possible, it can confuse Neo4j.
+        <li><p><strong>Numbers</strong> If your query involves any numbers you might need to use, you need to tell Neo4j at the loading stage that the cell contains an integer.</p></li>
+        <p>An example might be the amount in a political donation. When loading in a value, it would need to say <code>toInt(amount: line.Value)</code>.</p>
+        <p>Also refer to the refCard and website for information on dealing with dates.</p>
+      </ul>
+      <!--<li><strong>CAA plane data: </strong><a href="https://raw.githubusercontent.com/leilahaddou/graph-data/master/CAA500.csv">CAA500.csv</a>
+      </li>
+      <p>Register of private planes registered by the UK Civil Aviation Authority (first 500 only) Source: CAA</p></li>
+      <li><strong>To delete all nodes and relationships:</strong><br></p>
+      <code>MATCH (n)<br>
+      OPTIONAL MATCH (n)-[r]-()<br>
+      DELETE n,r;</li></code>
+      <br>
+      <li><strong>Political Donations: </strong><a href="https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv">Pef.csv</a>
+      <p>Cash donations made to polticians and political party between January 2010 and June 2015. Source: PEF online</li>
+      </ul>
+      <h2><strong>Part two</strong></h2>
+      <li><a href="http://neo4j.com/docs/stable/cypher-refcard/"><strong>Cypher refcard</strong></a></li>
+
+      <h2><strong>Creating Nodes and Relationships</strong></h2>
+
+      <p>Building nodes and relationships always begin with the <code>CREATE</code> command.</p> 
+      <p>To create a node, you need to use the following syntax: <code>CREATE (x:Label {property:Property})</code></p>
+      <p>To create a relationship: <code>CREATE (x)-[r:CONNECTED_TO]->(y)</code></p>
+      <p>Delete entire databases in the terminal:</p><br>
+      <p><code>neo4j stop && rm -rf /usr/local/Cellar/neo4j/*/libexec/data/* && neo4j start</code></p>-->
+    </div>  
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="neo4j-tutorial.js"></script>
+</body>
+</html>
+
+
+<!--<ul>
+<li><strong>CAA plane data: </strong><a href>https://raw.githubusercontent.com/leilahaddou/graph-data/master/CAA500.csv</li></a> 
+<p>Register of private planes registered by the UK Civil Aviation Authority (first 500 only) Source: CAA</p></li>
+<li><strong>To delete all nodes and relationships:</strong><br></p>
+<code>MATCH (n)<br>
+OPTIONAL MATCH (n)-[r]-()<br>
+DELETE n,r;</li></code>
+<br>
+<li><strong>Political Donations: </strong><a href>https://raw.githubusercontent.com/leilahaddou/graph-data/master/pef.csv</a>
+<p>Cash donations made to polticians and political party between January 2010 and June 2015. Source: PEF online</li>
+</ul>
+<h3><strong>Part two</strong></h3>
+<li><strong>Cypher refcard:</strong> <a href>http://neo4j.com/docs/stable/cypher-refcard/</p></a></li>
+</ul> -->
