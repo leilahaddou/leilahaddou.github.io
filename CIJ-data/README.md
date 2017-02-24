@@ -1,4 +1,4 @@
-# Data-driven Investigation
+# Data-driven Investigations
 
 ### Class resources
 
@@ -6,5 +6,6 @@
 
 Day one:
 
-*10.00* An Introduction to Data Journalism
+*10.00 #<a name="ex-1"></a>An Introduction to Data Journalism
 
+## [An Introduction to Data Journalism](#ex-1)
