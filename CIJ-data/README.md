@@ -38,7 +38,7 @@ Find the following using the political donations data:
 2. Who were the top ten donors by total spend? 
 3. Find the top ten donors by type; individuals, companies and trade unions.
 4. Ignoring cash donations, what was the largest type of donation?
-5. Who was UKIPs biggest donor?
+5. Who was UKIP's biggest donor?
 
 
 Using the charting tools available:
