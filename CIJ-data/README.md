@@ -47,15 +47,16 @@ Using the charting tools available:
 
 2. Bring in the following hosted data on Manchester crime from this URL: "https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/data-journalism-tutorial/2016-12-greater-manchester-street.csv". *Source [data.police.uk] (https://data.police.uk/)
 
-*Note: Remember the syntax `=IMPORTDATA("URL")`
-
 3. Import the first table showing the results of the Copeland by-election [from this Wikipedia page](https://en.wikipedia.org/wiki/Copeland_by-election,_2017):
-
-*Note: Remember the syntax `=IMPORTHTML("URL","table", element number)`
 
 4. Import the first table showing Best Actress Oscar winners from [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_Academy_Award_Best_Actress_winners_by_age)
 
 5. Using the IMPORTHTML function, import the current list of MPs from [Parliament.uk](http://www.parliament.uk/mps-lords-and-offices/mps/)
+
+
+*Hint: Remember the syntax `=IMPORTDATA("URL")`
+
+*Hint: Remember the syntax `=IMPORTHTML("URL","table", element number)`
 
 ---------------------------------------------------------------------------------------------------------------
 ## <a name="ex-3"></a>Sources in-depth
@@ -69,6 +70,12 @@ Using the charting tools available:
 1. We often hear that the UK economy is growing at the fastest rate in the G7. Where might you find data showing annual percentage growth of GDP per country? 
 
 2. In 2009 it was revealed that Israel sent over $400k worth of gold to North Korea in defiance of UN sanctions. Using [the UN ComTrade database](https://comtrade.un.org/data/), see if you find that shipment.
+
+3. Use [Marine Traffic](https://www.marinetraffic.com/) to see what vessels are currently floating in the Thames off Deptford (just down the road from here!)
+
+4. Now try to find the location of Philip Green's superyacht, Lionheart. 
+
+![Lionheart](http://i2.mirror.co.uk/incoming/article8441913.ece/ALTERNATES/s615b/Sir-Philip-Green-new-superyacht-Lionheart-in-Malta.jpg)
 
 
 ### Further resources:
@@ -94,7 +101,7 @@ Link to [Google's own search tips] (https://support.google.com/websearch/answer/
 
 1. Using the EU referendum data, write a conditional statement to show whether each area voted leave or remain.
 
-*Note Remember the syntax <=IF(condition, "[is true then do/write this]", "[else do/write that]")>
+*Note Remember the syntax `=IF(condition, "[is true then do/write this]", "[else do/write that]")`
 
 **Cleaning data: Split and Concatenate**
 
