@@ -50,7 +50,7 @@ Using the charting tools available:
 
 1. Download the EU referendum data from the [Electoral Commission website] (http://www.electoralcommission.org.uk/find-information-by-subject/elections-and-referendums/past-elections-and-referendums/eu-referendum/electorate-and-count-information) and upload it into a new worksheet.
 
-2. Bring in the following hosted data on Manchester crime from this URL: "https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/data-journalism-tutorial/2016-12-greater-manchester-street.csv". *Source [data.police.uk] (https://data.police.uk/)
+2. Bring in the following hosted data on Manchester crime from this URL: "https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/data-journalism-tutorial/2016-12-greater-manchester-street.csv". *Source [data.police.uk] (https://data.police.uk/)*
 
 3. Import the first table showing the results of the Copeland by-election [from this Wikipedia page](https://en.wikipedia.org/wiki/Copeland_by-election,_2017):
 
