@@ -42,7 +42,7 @@ Using the charting tools available:
 
 1. Using advanced google search syntax, can you find a de-cassified NSA document called "Untangling the Web"?
 2. There are more than a 150 "datastores" on UK government websites. Choose three that you like and explain why. 
-3. 
+3. Can you find an academic report from Hull university on ASBOs being used as a "badge of honour"?
 
 Verifying information:
 
@@ -56,6 +56,6 @@ Find some some minutes of the Open Data User Group – using just one search if 
 
 ### Further resources:
 
-[Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
+Link to [Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
 -----------------------------------------------------------------------------------------------------------------
 
