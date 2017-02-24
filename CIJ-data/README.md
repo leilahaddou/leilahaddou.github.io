@@ -20,9 +20,9 @@ Day one:
 
 Hypotheses continued: 
 
-1. 
-2.
-3.
+1. Rail travel cost more as a percentage of average wages in the UK than in the rest of Europe. 
+2. Westminster aides are also being paid by lobby groups
+3. 
 
 -------------------------------------------------------------------------------------------------------------
 ## <a name="ex-2"></a>Excel (part one)
@@ -54,9 +54,9 @@ Using the charting tools available:
 5. Using the IMPORTHTML function, import the current list of MPs from [Parliament.uk](http://www.parliament.uk/mps-lords-and-offices/mps/)
 
 
-*Hint: Remember the syntax `=IMPORTDATA("URL")`
+*Hint: Remember the syntax* `=IMPORTDATA("URL")`
 
-*Hint: Remember the syntax `=IMPORTHTML("URL","table", element number)`
+*Hint: Remember the syntax* `=IMPORTHTML("URL","table", element number)`
 
 ---------------------------------------------------------------------------------------------------------------
 ## <a name="ex-3"></a>Sources in-depth
