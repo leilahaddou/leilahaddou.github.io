@@ -77,11 +77,14 @@ Link to [Google's own search tips] (https://support.google.com/websearch/answer/
 
 **Freedom of Information**
 
-[Information Commissioner's Office] (http://www.ico.gov.uk/)
-[What do they know]( An online tool for sending and tracking FOIs (warning: your request will be public)
-FOI Directory [
-Wobbing EU
-Ask the EU
+* [Information Commissioner's Office] (http://www.ico.gov.uk/)
+* [What do they know]( An online tool for sending and tracking FOIs (Warning: your request will be public)
+* [FOI Directory](http://www.foi.directory/)
+* [Wobbing EU](www.wobbing.eu)
+* [Ask the EU](www.asktheeu.org) EU version of What Do They Know (above) for sending and tracking FOIs to European bodies
+* [Access Info](https://www.access-info.org/) An open info campaign group focussed on Europe 
+
+[UN Resources list](http://research.un.org/en/un-resources)
 
 
 -----------------------------------------------------------------------------------------------------------------
@@ -110,8 +113,8 @@ Recap [OpenRefine with Jonathan Stoneman](http://www.tcij.org/node/1471) (video)
 ---------------------------------------------------------------------------------------------------
 ## <a name="ex-5"></a>Pivot Tables
 
-1. How many i
+1. Using the political donor data, how many individual cash donations were made to each recipient? 
 
-2. Go back to the Manchester crime data you imported earlier. Use a pivot table to show how many incident 
+2. Go back to the Manchester crime data you imported earlier. Use a pivot table to summarise the data by crime type.
 
 
