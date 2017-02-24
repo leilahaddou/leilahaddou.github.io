@@ -51,7 +51,7 @@ Using the charting tools available:
 
 4. Import the first table showing Best Actress Oscar winners from [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_Academy_Award_Best_Actress_winners_by_age)
 
-5. Using the IMPORTHTML function, import the current list of MPs from [Parliament.uk](http://www.parliament.uk/mps-lords-and-offices/mps/)
+5. Using the `IMPORTHTML` function, import the current list of MPs from [Parliament.uk](http://www.parliament.uk/mps-lords-and-offices/mps/)
 
 
 *Hint: Remember the syntax* `=IMPORTDATA("URL")`
