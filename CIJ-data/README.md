@@ -92,8 +92,8 @@ Using the charting tools available:
 
 * [Information Commissioner's Office] (http://www.ico.gov.uk/)
 * [What do they know](https://www.whatdotheyknow.com/) An online tool for sending and tracking FOIs (Warning: your request will be public)
-* [FOI Directory](http://www.foi.directory/)
-* [Wobbing EU](www.wobbing.eu)
+* [FOI Directory](http://www.foi.directory/) A guide to FOIing public bodies
+* [Wobbing EU](www.wobbing.eu) A guide to FOIing the EU and country-by-country information.
 * [Ask the EU](www.asktheeu.org) EU version of What Do They Know (above) for sending and tracking FOIs to European bodies
 * [Access Info](https://www.access-info.org/) An open info campaign group focussed on Europe 
 
