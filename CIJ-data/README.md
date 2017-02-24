@@ -9,6 +9,11 @@ Day one:
 * 10.00 [An Introduction to Data Journalism](#ex-1)
 * 11:00 [Excel (part one)] (#ex-2)
 * 12:00 [Sources in-depth] (#ex-3)
+* 13:00 Lunch! 
+* 14:00 The Story Memo
+* 14:30 Excel (part two) (#ex-4)
+* 16:00 Pivot tables
+* 17:00 End of day one
 
 ------------------------------------------------------------------------------------------------------------
 ## <a name="ex-1"></a>An Introduction to Data Journalism
@@ -37,6 +42,22 @@ Using the charting tools available:
 1. Make a graphic showing each party's income by donation type
 2. Make a graphic showing each party's income by donor status
 
+Importing data 
+
+1. Download the EU referendum data from the [Electoral Commission website] (http://www.electoralcommission.org.uk/find-information-by-subject/elections-and-referendums/past-elections-and-referendums/eu-referendum/electorate-and-count-information) and upload it into a new worksheet.
+
+2. Bring in the following hosted data on Manchester crime from this URL: "https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/data-journalism-tutorial/2016-12-greater-manchester-street.csv". *Source [data.police.uk] (https://data.police.uk/)
+
+*Note: Remember the syntax =IMPORTDATA("URL")
+
+3. Import the first table showing the results of the Copeland by-election [from this Wikipedia page](https://en.wikipedia.org/wiki/Copeland_by-election,_2017):
+
+*Note: Remember the syntax =IMPORTHTML("url","table",number [of the **element** on the page])
+
+4. Import the X table showing .... from [this Wikipedia page]():
+
+5. Using the IMPORTHTML function, import the current list of MPs from [Parliament.uk]
+
 ---------------------------------------------------------------------------------------------------------------
 ## <a name="ex-3"></a>Sources in-depth
 
@@ -57,5 +78,6 @@ Find some some minutes of the Open Data User Group – using just one search if 
 ### Further resources:
 
 Link to [Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
+
 -----------------------------------------------------------------------------------------------------------------
 
