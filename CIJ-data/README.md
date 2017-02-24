@@ -11,8 +11,8 @@ Day one:
 * 12:00 [Sources in-depth] (#ex-3)
 * 13:00 Lunch! 
 * 14:00 The Story Memo
-* 14:30 Excel (part two) (#ex-4)
-* 16:00 Pivot tables
+* 14:30 [Excel (part two)] (#ex-4)
+* 16:00 [Pivot tables] (#ex-5)
 * 17:00 End of day one
 
 ------------------------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ Hypotheses continued:
 
 Find the following using the political donations data:
 
-1. What was the largest donation by an invidual?
+1. What was the largest donation by an individual?
 2. Who were the top ten donors by total spend? 
 3. Find the top ten donors by type; individuals, companies and trade unions.
 4. Ignoring cash donations, what was the largest type of donation?
