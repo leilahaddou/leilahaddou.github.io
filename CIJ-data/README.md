@@ -54,8 +54,8 @@ There are more than 150 “datastores” on UK government websites. Find 3 that 
 Can you find an academic report on ASBOs being used as a “badge of honour”?
 Find some some minutes of the Open Data User Group – using just one search if you can.
 
-## Further resources:
+### Further resources:
 
-[Google's own search tips] (#https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)  
+[Google's own search tips] (#<a "https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620"></a>Google's own search tips)  
 -----------------------------------------------------------------------------------------------------------------
 
