@@ -54,9 +54,9 @@ Importing data
 
 *Note: Remember the syntax =IMPORTHTML("url","table",number [of the **element** on the page])
 
-4. Import the X table showing .... from [this Wikipedia page]():
+4. Import the first table showing Best Actress Oscar winners from [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_Academy_Award_Best_Actress_winners_by_age)
 
-5. Using the IMPORTHTML function, import the current list of MPs from [Parliament.uk]
+5. Using the IMPORTHTML function, import the current list of MPs from [Parliament.uk](http://www.parliament.uk/mps-lords-and-offices/mps/)
 
 ---------------------------------------------------------------------------------------------------------------
 ## <a name="ex-3"></a>Sources in-depth
@@ -67,13 +67,11 @@ Importing data
 
 Verifying information:
 
-1. XXX Your editor tells you the verify the claim. Where would you find this information? Is the claim true?
+1. We often hear that the UK economy is growing at the fastest rate in the G7. Where would you find data showing annual percentage growth of GDP per country? 
 
-There’s a de-classified NSA doc called “untangling the web”. It’s online – can you find it?
-There are more than 150 “datastores” on UK government websites. Find 3 that you like. Explain why you liked them
- A lecture was given on the limits of objective reporting at Hull University.
-Can you find an academic report on ASBOs being used as a “badge of honour”?
-Find some some minutes of the Open Data User Group – using just one search if you can.
+2. In 2009 it was revealed that Israel sent over $400k worth 
+
+
 
 ### Further resources:
 
