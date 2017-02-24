@@ -21,8 +21,13 @@ Day one:
 Hypotheses continued: 
 
 1. Rail travel costs more in the UK than in other European countries 
-2. Westminster aides are also being paid by lobby groups
+2. Westminster aides are being paid by lobby groups
 3. 
+
+##Further reading:
+
+Philip Meyer on [the Detroit and London riots](https://www.theguardian.com/commentisfree/2011/dec/09/riot-theory-relative-detroit-england)
+
 
 -------------------------------------------------------------------------------------------------------------
 ## <a name="ex-2"></a>Excel (part one)
@@ -69,7 +74,7 @@ Using the charting tools available:
 
 1. We often hear that the UK economy is growing at the fastest rate in the G7. Where might you find data showing annual percentage growth of GDP per country? 
 
-2. In 2009 it was revealed that Israel sent over $400k worth of gold to North Korea in defiance of UN sanctions. Using [the UN ComTrade database](https://comtrade.un.org/data/), see if you find that shipment.
+2. In 2015 it was revealed that Israel exported nearly $400k worth of gold to North Korea in defiance of UN sanctions. Using [the UN ComTrade database](https://comtrade.un.org/data/), see if you find that shipment.
 
 3. Use [Marine Traffic](https://www.marinetraffic.com/) to see what vessels are currently floating in the Thames off Deptford (just down the road from here!)
 
@@ -81,11 +86,12 @@ Using the charting tools available:
 ### Further resources:
 
 Link to [Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
+Jonathan Stoneman paper for the Reuters Institute [Does Open Data Need Journalism?](http://reutersinstitute.politics.ox.ac.uk/sites/default/files/Stoneman%20-%20Does%20Open%20Data%20need%20Journalism.pdf)
 
 **Freedom of Information**
 
 * [Information Commissioner's Office] (http://www.ico.gov.uk/)
-* [What do they know]( An online tool for sending and tracking FOIs (Warning: your request will be public)
+* [What do they know](https://www.whatdotheyknow.com/) An online tool for sending and tracking FOIs (Warning: your request will be public)
 * [FOI Directory](http://www.foi.directory/)
 * [Wobbing EU](www.wobbing.eu)
 * [Ask the EU](www.asktheeu.org) EU version of What Do They Know (above) for sending and tracking FOIs to European bodies
