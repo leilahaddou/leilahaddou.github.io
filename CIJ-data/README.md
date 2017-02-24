@@ -85,8 +85,8 @@ Using the charting tools available:
 
 ### Further resources:
 
-Link to [Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
-Jonathan Stoneman paper for the Reuters Institute [Does Open Data Need Journalism?](http://reutersinstitute.politics.ox.ac.uk/sites/default/files/Stoneman%20-%20Does%20Open%20Data%20need%20Journalism.pdf)
+* Link to [Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
+* Jonathan Stoneman paper for the Reuters Institute [Does Open Data Need Journalism?](http://reutersinstitute.politics.ox.ac.uk/sites/default/files/Stoneman%20-%20Does%20Open%20Data%20need%20Journalism.pdf)
 
 **Freedom of Information**
 
@@ -128,6 +128,8 @@ Recap [OpenRefine with Jonathan Stoneman](http://www.tcij.org/node/1471) (video)
 
 1. Using the political donor data, how many individual cash donations were made to each recipient? 
 
-2. Go back to the Manchester crime data you imported earlier. Use a pivot table to summarise the data by crime type.
+2. Create a pivot table showing who donated most frequently.
+
+3. Go back to the Manchester crime data you imported earlier. Use a pivot table to summarise the data by crime type.
 
 
