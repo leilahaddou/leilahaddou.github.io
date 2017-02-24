@@ -20,7 +20,7 @@ Day one:
 
 Hypotheses continued: 
 
-1. Rail travel cost more as a percentage of average wages in the UK than in the rest of Europe. 
+1. Rail travel costs more in the UK than in other European countries 
 2. Westminster aides are also being paid by lobby groups
 3. 
 
