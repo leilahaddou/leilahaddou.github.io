@@ -56,6 +56,6 @@ Find some some minutes of the Open Data User Group – using just one search if 
 
 ### Further resources:
 
-[Google's own search tips] (#<a "https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620"></a>Google's own search tips)  
+[Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
 -----------------------------------------------------------------------------------------------------------------
 
