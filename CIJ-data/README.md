@@ -51,7 +51,7 @@ Using the charting tools available:
 
 3. Import the first table showing the results of the Copeland by-election [from this Wikipedia page](https://en.wikipedia.org/wiki/Copeland_by-election,_2017):
 
-*Note: Remember the syntax `=IMPORTHTML("url","table",number [of the **element** on the page])`
+*Note: Remember the syntax `=IMPORTHTML("URL","table", element number)`
 
 4. Import the first table showing Best Actress Oscar winners from [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_Academy_Award_Best_Actress_winners_by_age)
 
