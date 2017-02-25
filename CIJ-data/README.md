@@ -22,11 +22,12 @@ Hypotheses continued:
 
 1. Rail travel costs more in the UK than in other European countries 
 2. Westminster aides are being paid by lobby groups
-3. 
+3. Town centre pubs are on the decline, whilst cafes are thriving
 
 ##Further reading:
 
 Philip Meyer on [the Detroit and London riots](https://www.theguardian.com/commentisfree/2011/dec/09/riot-theory-relative-detroit-england)
+Michael Kingsley: [Donald Trump and the Limits of Data Journalism](http://www.vanityfair.com/news/2016/08/donald-trump-and-the-limits-of-data-journalism)
 
 
 -------------------------------------------------------------------------------------------------------------
@@ -113,9 +114,8 @@ Using the charting tools available:
 
 1. From your imported list of current MPs, try to split the name into separate columns using the comma as a separator 
 
-2. Split the first X characters from X. Now the last X. 
+2. Split the first 5 characters from original column of names. Now the last 4. 
 
-2. Import X from X . Using concatenate, merge the X ... FINISH
 
 ### Further resources:
 
