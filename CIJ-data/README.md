@@ -156,4 +156,13 @@ Find the following using the political donations data:
 * [Ask the EU](www.asktheeu.org) EU version of What Do They Know (above) for sending and tracking FOIs to European bodies
 * [Access Info](https://www.access-info.org/) An open info campaign group focussed on Europe 
 
+**SQL**
+
+[Link to addon] (https://addons.mozilla.org/en-GB/firefox/addon/sqlite-manager/)
+
+And link to download firefox - http://www.get-firefox.org/
+
+Get started guide:https://gist.github.com/hofmannsven/9164408
+
+
 
