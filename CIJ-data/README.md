@@ -162,7 +162,7 @@ Find the following using the political donations data:
 
 And [link to download firefox] (http://www.get-firefox.org/)
 
-Get started guide:https://gist.github.com/hofmannsven/9164408
+[Get started guide](https://gist.github.com/hofmannsven/9164408)
 
 
 
