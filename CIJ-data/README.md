@@ -15,6 +15,8 @@ Day one:
 * 16:00 [Pivot tables] (#ex-5)
 * 17:00 End of day one
 
+[Day Two](#day2)
+
 ------------------------------------------------------------------------------------------------------------
 ## <a name="ex-1"></a>An Introduction to Data Journalism
 
@@ -89,15 +91,6 @@ Using the charting tools available:
 * Link to [Google's own search tips] (https://support.google.com/websearch/answer/2466433?hl=en&ref_topic=3081620)
 * Jonathan Stoneman paper for the Reuters Institute [Does Open Data Need Journalism?](http://reutersinstitute.politics.ox.ac.uk/sites/default/files/Stoneman%20-%20Does%20Open%20Data%20need%20Journalism.pdf)
 
-**Freedom of Information**
-
-* [Information Commissioner's Office] (http://www.ico.gov.uk/)
-* [What do they know](https://www.whatdotheyknow.com/) An online tool for sending and tracking FOIs (Warning: your request will be public)
-* [FOI Directory](http://www.foi.directory/) A guide to FOIing public bodies
-* [Wobbing EU](www.wobbing.eu) A guide to FOIing the EU and country-by-country information.
-* [Ask the EU](www.asktheeu.org) EU version of What Do They Know (above) for sending and tracking FOIs to European bodies
-* [Access Info](https://www.access-info.org/) An open info campaign group focussed on Europe 
-
 [UN Resources list](http://research.un.org/en/un-resources)
 
 
@@ -131,5 +124,36 @@ Recap [OpenRefine with Jonathan Stoneman](http://www.tcij.org/node/1471) (video)
 2. Create a pivot table showing who donated most frequently.
 
 3. Go back to the Manchester crime data you imported earlier. Use a pivot table to summarise the data by crime type.
+
+--------------------------------------------------------------------------
+
+## <a name="day2"></a>Day two
+
+Recap exercises:
+
+Find the following using the political donations data:
+
+1. What was the largest donation by an individual?
+2. Who were the top ten donors by total spend? 
+3. Find the top ten donors by type; individuals, companies and trade unions.
+4. Ignoring cash donations, what was the largest type of donation?
+5. Who was UKIP's biggest donor?
+
+**Pivot Tables**
+
+1. Using the political donor data, how many individual cash donations were made to each recipient? 
+
+2. Create a pivot table showing who donated most frequently.
+
+3. Import the Manchester crime data from this URL:"https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/data-journalism-tutorial/2016-12-greater-manchester-street.csv". Use a pivot table to summarise the data by crime type.
+
+**Freedom of Information**
+
+* [Information Commissioner's Office] (http://www.ico.gov.uk/)
+* [What do they know](https://www.whatdotheyknow.com/) An online tool for sending and tracking FOIs (Warning: your request will be public)
+* [FOI Directory](http://www.foi.directory/) A guide to FOIing public bodies
+* [Wobbing EU](www.wobbing.eu) A guide to FOIing the EU and country-by-country information.
+* [Ask the EU](www.asktheeu.org) EU version of What Do They Know (above) for sending and tracking FOIs to European bodies
+* [Access Info](https://www.access-info.org/) An open info campaign group focussed on Europe 
 
 
