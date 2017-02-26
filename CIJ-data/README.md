@@ -4,6 +4,7 @@
 
 ### Agenda
 
+
 Day one:
 
 * 10.00 [An Introduction to Data Journalism](#ex-1)
@@ -16,6 +17,8 @@ Day one:
 * 17:00 End of day one
 
 [Day Two](#day2)
+
+[Link to presentation:] (https://docs.google.com/presentation/d/1S9ZGb6tQE1N1b0gO5HoHxeKRCoAvtFUZ8q4PFPH34O8/edit?usp=sharing)
 
 ------------------------------------------------------------------------------------------------------------
 ## <a name="ex-1"></a>An Introduction to Data Journalism
@@ -163,6 +166,8 @@ Find the following using the political donations data:
 And [link to download firefox] (http://www.get-firefox.org/)
 
 [Get started guide](https://gist.github.com/hofmannsven/9164408)
+
+
 
 
 
