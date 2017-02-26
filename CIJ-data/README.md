@@ -160,7 +160,7 @@ Find the following using the political donations data:
 
 [Link to addon] (https://addons.mozilla.org/en-GB/firefox/addon/sqlite-manager/)
 
-And link to download firefox - http://www.get-firefox.org/
+And [link to download firefox] (http://www.get-firefox.org/)
 
 Get started guide:https://gist.github.com/hofmannsven/9164408
 
