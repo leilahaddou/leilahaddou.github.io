@@ -8,18 +8,32 @@ Link to stories mentioned in presentation
 * [Free podcast from the FT on China/Cambodia](https://www.acast.com/ft-investigations/cambodiafallsforchinascorporateembrace?autoplay?autoplay)
 * [Is social media empowering Dutch populism?](https://www.ft.com/content/b1830ac2-07f4-11e7-97d1-5e720a26771b)
 
+**Class data**
+
+[Referendum data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv)
+
+[Open Corporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv)
+
 ## Building your database
 
 **Create a node**
-```CREATE (x:Label {property:"Value"})```
+```
+CREATE (x:Label {property:"Value"})
+```
 
 For example, to create a node for me and a node for Summer School I might use the following:
-```CREATE (l:Person {name:"Leila Haddou"})```
-```CREATE (e:Event {eventTitle:"Summer School"})```
+```
+CREATE (l:Person {name:"Leila Haddou"})
+```
+```
+CREATE (e:Event {eventTitle:"Summer School"})
+```
 
 **Create a relationship**
 
-```CREATE (l)-[r:IS_AT]->(e)```
+```
+CREATE (l)-[r:IS_AT]->(e)
+```
 
 
 **Using ```MERGE``` instead of ```CREATE```**
@@ -33,15 +47,15 @@ Data which appears in the curly brackets of our code is a property or attribute,
 
 **Importing Data**
 
-From a URL: ```LOAD CSV WITH HEADERS FROM "urladdress.csv" AS line```
+From a URL: 
+```
+LOAD CSV WITH HEADERS FROM "urladdress.csv" AS line
+```
 
-**Class data**
-
-[Referendum data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv)
-
-[Open Corporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv)
-
-From a local file (use the filepath on your computer): ```LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.csv" AS line```
+From a local file (use the filepath on your computer): 
+```
+LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.csv" AS line
+```
 
 *Please note Windows files will use backslashes like so :\\\*
 
