@@ -6,9 +6,7 @@ Link to [session presentation](https://docs.google.com/presentation/d/1TQdR3OX-b
 
 Shared [Google Sheets file](https://docs.google.com/spreadsheets/d/1aWf2plYt5UmUOOl-ry9SYFCL7dnoKFxNhb03SbPFIHs/edit?usp=sharing)  
 
-Link to [Tabula](http://tabula.timesdev.tools:8080/) for getting tables out of PDFs
-
-Practice [PDF file](https://publications.parliament.uk/pa/cm/cmsecret/register.pdf) for getting tables out with Tabula.
+Link to [Tabula](http://tabula.timesdev.tools/) for getting tables out of PDFs
 
 ----------------------------------------------------------------------------------------------------------------------------
 
