@@ -30,7 +30,7 @@ CREATE (e:Event {eventTitle:"Summer School"})
 CREATE (l)-[r:IS_AT]->(e)
 ```
 
-**Using ```MERGE``` instead of ```CREATE```**
+**Using `MERGE` instead of `CREATE`**
 
 ```CREATE``` will blindly create nodes regardless of what the data is or if the same instance occurs again in the dataset.
 Using ```MERGE``` instead of ```CREATE```will go through each line of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one. *Use with care* 
@@ -52,3 +52,28 @@ LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.cs
 ```
 
 *Please note Windows files will use backslashes like so :\\\*
+
+**Loading all the data from part one**
+
+```
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv' AS row
+MERGE (d:Donor {
+	name: row.DonorName,
+	status: row.DonorStatus,
+	companyNumber: row.CompanyRegistrationNumber
+})
+MERGE (r:Recipient {
+	name: row.RegulatedEntityName
+})
+CREATE (d)-[:DONATED_TO { date: row.ReceivedDate, value: toInteger(row.Value) }]->(r)
+```
+
+```
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv' AS row
+MATCH (r) WHERE r.companyNumber = row.companyNumber
+MERGE (o:Officer {
+	name: row.officerName,
+	address: row.officerAddress
+})
+MERGE (o)-[:IS_AN_OFFICER_OF { startDate: row.officerStartDate }]->(r)
+```
