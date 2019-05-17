@@ -5,9 +5,8 @@
 
 ## Class data
 
-[Referendum data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv)
-
-[Open Corporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv)
+* [Referendum data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv)
+* [OpenCorporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv)
 
 ## Building your database
 
