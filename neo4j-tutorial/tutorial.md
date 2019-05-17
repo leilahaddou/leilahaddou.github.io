@@ -1,9 +1,9 @@
 # Exploring networks with graph databases 
 
-[Presentation, part 1](https://docs.google.com/presentation/d/1xG1f7YpJDGi_HLlKrjNJLSY2MSaguLgEsiEMDy3wV4M) 
-[Presentation, part 2](https://docs.google.com/presentation/d/1WUUlDD-edFxVUYvEub0oZ5W5sdEbvOL3qwO2c6VyK7g)
+* [Slides, part 1](https://docs.google.com/presentation/d/1xG1f7YpJDGi_HLlKrjNJLSY2MSaguLgEsiEMDy3wV4M) 
+* [Slides, part 2](https://docs.google.com/presentation/d/1WUUlDD-edFxVUYvEub0oZ5W5sdEbvOL3qwO2c6VyK7g)
 
-**Class data**
+## Class data
 
 [Referendum data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv)
 
