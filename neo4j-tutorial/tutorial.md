@@ -1,6 +1,6 @@
 # Exploring networks with graph databases 
 
-* [Slides, part 1](https://docs.google.com/presentation/d/1xG1f7YpJDGi_HLlKrjNJLSY2MSaguLgEsiEMDy3wV4M) 
+* [Slides, part 1](https://docs.google.com/presentation/d/1zE8usdZS0WOZ8TEJzXpFYfT8Ui85SdKw11f-pEuImBk) 
 * [Slides, part 2](https://docs.google.com/presentation/d/1WUUlDD-edFxVUYvEub0oZ5W5sdEbvOL3qwO2c6VyK7g)
 
 ## Class data
