@@ -53,7 +53,7 @@ LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.cs
 
 *Please note Windows files will use backslashes like so :\\\*
 
-**Loading all the data from part one**
+## Loading all the data
 
 ```
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv' AS row
