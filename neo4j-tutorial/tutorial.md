@@ -1,12 +1,9 @@
 # Exploring networks with graph databases 
 
-* [Slides, part 1](https://docs.google.com/presentation/d/1zE8usdZS0WOZ8TEJzXpFYfT8Ui85SdKw11f-pEuImBk) 
-* [Slides, part 2](https://docs.google.com/presentation/d/1WUUlDD-edFxVUYvEub0oZ5W5sdEbvOL3qwO2c6VyK7g)
-
 ## Class data
 
-* [Referendum data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv)
-* [OpenCorporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv)
+* [Political donation data](https://github.com/leilahaddou/leilahaddou.github.io/blob/master/donations-companies-cash.csv) Cash donations from companies since Theresa May took office in July 2016
+* [OpenCorporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/theresa-companies-cash-directors.csv)
 
 ## Building your database
 
