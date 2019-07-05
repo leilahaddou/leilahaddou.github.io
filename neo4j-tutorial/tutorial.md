@@ -2,7 +2,7 @@
 
 ## Class data
 
-* [Political donation data](https://github.com/leilahaddou/leilahaddou.github.io/blob/master/donations-companies-cash.csv) 
+* [Political donation data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/donations-companies-cash.csv) 
 * [OpenCorporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/theresa-companies-cash-directors.csv)
 
 ## Building your database
@@ -53,7 +53,7 @@ LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.cs
 ## Loading all the data
 
 ```
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations.csv' AS row
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/donations-companies-cash.csv' AS row
 MERGE (d:Donor {
 	name: row.DonorName,
 	status: row.DonorStatus,
@@ -66,7 +66,7 @@ CREATE (d)-[:DONATED_TO { date: row.ReceivedDate, value: toInteger(row.Value) }]
 ```
 
 ```
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/neo4j-tutorial/brexit-donations-officers.csv' AS row
+LOAD CSV WITH HEADERS FROM 'https://github.com/leilahaddou/leilahaddou.github.io/blob/master/theresa-companies-cash-directors.csv' AS row
 MATCH (r) WHERE r.companyNumber = row.companyNumber
 MERGE (o:Officer {
 	name: row.officerName,
