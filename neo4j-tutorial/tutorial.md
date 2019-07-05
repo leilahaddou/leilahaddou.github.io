@@ -66,7 +66,7 @@ CREATE (d)-[:DONATED_TO { date: row.ReceivedDate, value: toInteger(row.Value) }]
 ```
 
 ```
-LOAD CSV WITH HEADERS FROM 'https://github.com/leilahaddou/leilahaddou.github.io/blob/master/theresa-companies-cash-directors.csv' AS row
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/theresa-companies-cash-directors.csv' AS row
 MATCH (r) WHERE r.companyNumber = row.companyNumber
 MERGE (o:Officer {
 	name: row.officerName,
