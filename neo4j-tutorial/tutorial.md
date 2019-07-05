@@ -2,7 +2,7 @@
 
 ## Class data
 
-* [Political donation data](https://github.com/leilahaddou/leilahaddou.github.io/blob/master/donations-companies-cash.csv) Cash donations from companies since Theresa May took office in July 2016
+* [Political donation data](https://github.com/leilahaddou/leilahaddou.github.io/blob/master/donations-companies-cash.csv) 
 * [OpenCorporates data](https://raw.githubusercontent.com/leilahaddou/leilahaddou.github.io/master/theresa-companies-cash-directors.csv)
 
 ## Building your database
