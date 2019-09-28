@@ -10,15 +10,15 @@
 **Create a node**
 
 ```
-CREATE (x:Label {property:"Value"})
+CREATE (x:Label { property: "Value" })
 ```
 
-For example, to create a node for me and a node for Summer School I might use the following:
+For example, to create a node for me and a node for an event I might use the following:
 ```
-CREATE (l:Person {name:"Leila Haddou"})
+CREATE (l:Person { name:"Leila Haddou" })
 ```
 ```
-CREATE (e:Event {eventTitle:"Summer School"})
+CREATE (e:Event {eventTitle: "Summer School" })
 ```
 
 **Create a relationship**
@@ -48,7 +48,7 @@ From a local file (use the filepath on your computer):
 LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.csv" AS line
 ```
 
-*Please note Windows files will use backslashes like so :\\\*
+**Please note Windows files will use backslashes like so `\`**
 
 ## Loading all the data
 
