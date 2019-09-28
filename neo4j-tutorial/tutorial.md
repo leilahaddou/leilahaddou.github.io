@@ -30,7 +30,7 @@ CREATE (l)-[r:IS_AT]->(e)
 **Using `MERGE` instead of `CREATE`**
 
 `CREATE` will blindly create nodes regardless of what the data is or if the same instance occurs again in the dataset.
-Using `MERGE` instead of `CREATE`will go through each row of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one. *Use with care* 
+Using `MERGE` instead of `CREATE`will go through each row of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one. *Use with care!*
 
 **Adding attributes**
 
