@@ -10,15 +10,15 @@
 **Create a node**
 
 ```
-CREATE (x:Label { property: "Value" })
+CREATE (x:Label { property: 'Value' })
 ```
 
 For example, to create a node for me and a node for an event I might use the following:
 ```
-CREATE (l:Person { name: "Leila Haddou" })
+CREATE (l:Person { name: 'Leila Haddou' })
 ```
 ```
-CREATE (e:Event {eventTitle: "Summer School" })
+CREATE (e:Event { eventTitle: 'Summer School' })
 ```
 
 **Create a relationship**
@@ -40,12 +40,12 @@ Data which appears in the curly brackets of our code is a property or attribute,
 
 From a URL: 
 ```
-LOAD CSV WITH HEADERS FROM "urladdress.csv" AS row
+LOAD CSV WITH HEADERS FROM 'urladdress.csv' AS row
 ```
 
 From a local file (use the filepath on your computer): 
 ```
-LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Desktop/data.csv" AS row
+LOAD CSV WITH HEADERS FROM 'file:///Users/leilahaddou/Desktop/data.csv' AS row
 ```
 
 **Please note Windows files will use backslashes like so `\`**
