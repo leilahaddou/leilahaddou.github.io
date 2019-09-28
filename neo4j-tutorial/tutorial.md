@@ -74,3 +74,27 @@ MERGE (o:Officer {
 })
 MERGE (o)-[:IS_AN_OFFICER_OF { startDate: row.officerStartDate }]->(r)
 ```
+
+## Keyboards
+
+Make sure caps lock is off!
+
+### German
+
+| Character | Press | Location |
+| ----------|-------|----------|
+|`(`| Shift-`8` | |
+|`)`| Shift-`9` | |
+|`:`| Shift-`,` | Bottom right |
+|`,`| `,`       | To the right of `M` |
+|`.`| `.`       | Bottom right, has colon too |
+|`[`| AltGr-`8` |
+|`]`| AltGr-`9` |
+|`{`| AltGr-`7` |
+|`}`| AltGr-`0` |
+|`=`| Shift-`0` |
+|`‘`| Shift-`#` | On the right, above enter |
+|`-`| `-`       | Bottom right, next to shift |
+|`_`| Shift-`-` | Bottom right, next to shift |
+|`>`| `>`       | Bottom left on some keyboards, missing on others! |
+|`~`| AltGr-`+` | Right, above enter, left of `#` |
