@@ -29,23 +29,23 @@ CREATE (l)-[r:IS_AT]->(e)
 
 **Using `MERGE` instead of `CREATE`**
 
-```CREATE``` will blindly create nodes regardless of what the data is or if the same instance occurs again in the dataset.
-Using ```MERGE``` instead of ```CREATE```will go through each line of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one. *Use with care* 
+`CREATE` will blindly create nodes regardless of what the data is or if the same instance occurs again in the dataset.
+Using `MERGE` instead of `CREATE`will go through each row of the CSV and look for duplicates. Where it finds instances of the same thing, it will merge them into one. *Use with care* 
 
 **Adding attributes**
 
-Data which appears in the curly brackets of our code is a property or attribute, i.e. <{name: line.Name}>. To add multiple properties, do the same within the brackets separated by a comma like so: <{donorName: line.Name, donorStatus: line.Party}>
+Data which appears in the curly brackets of our code is a property or attribute, i.e. `{ name: row.Name }`. To add multiple properties, do the same within the brackets separated by a comma like so: `{ donorName: row.Name, donorStatus: row.Party }`.
 
 **Importing data**
 
 From a URL: 
 ```
-LOAD CSV WITH HEADERS FROM "urladdress.csv" AS line
+LOAD CSV WITH HEADERS FROM "urladdress.csv" AS row
 ```
 
 From a local file (use the filepath on your computer): 
 ```
-LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Documents/Graphdata/pef.csv" AS line
+LOAD CSV WITH HEADERS FROM "file:///Users/leilahaddou/Desktop/data.csv" AS row
 ```
 
 **Please note Windows files will use backslashes like so `\`**
