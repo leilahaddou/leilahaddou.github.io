@@ -15,7 +15,7 @@ CREATE (x:Label { property: "Value" })
 
 For example, to create a node for me and a node for an event I might use the following:
 ```
-CREATE (l:Person { name:"Leila Haddou" })
+CREATE (l:Person { name: "Leila Haddou" })
 ```
 ```
 CREATE (e:Event {eventTitle: "Summer School" })
