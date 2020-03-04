@@ -27,7 +27,7 @@ CREATE (e:Event {name:'NICAR 2020'})
 
 ``` 
  CREATE (p:Person {name:'Leila Haddou'})
- CREATE (e:Event {name: 'NICAR 2020'})
+ CREATE (e:Event {name:'NICAR 2020'})
  CREATE (p)-[r:IS_AT]->(e)
  ```
  
