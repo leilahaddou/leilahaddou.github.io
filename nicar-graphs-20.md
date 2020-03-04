@@ -17,7 +17,7 @@ To start with, we'll be using three Cypher commands - `CREATE`, `LOAD CSV` and `
 
 ``` 
 CREATE (p:Person {name:'Leila Haddou'})
-CREATE (e:Event {title: 'NICAR 2020'})
+CREATE (e:Event {name:'NICAR 2020'})
 ```
 
 
@@ -27,7 +27,7 @@ CREATE (e:Event {title: 'NICAR 2020'})
 
 ``` 
  CREATE (p:Person {name:'Leila Haddou'})
- CREATE (e:Event {title: 'NICAR 2020'})
+ CREATE (e:Event {name: 'NICAR 2020'})
  CREATE (p)-[r:IS_AT]->(e)
  ```
  
@@ -44,13 +44,53 @@ CREATE (d)-[dt:DONATED_TO {date:row.AcceptedDate, type:row.DonationType, value:t
 
 ## Querying our graph database 
 
+<img width="50" align="left" alt="Screenshot 2020-03-04 at 14 42 06" src="https://user-images.githubusercontent.com/6706325/75921283-7c930700-5e26-11ea-830c-599912c6d0ca.png">
+
+```
+MATCH (x)
+RETURN (x)
+LIMIT 10
+```
 
 ### Exact match
 
+<img width="50"  align="left" alt="Screenshot 2020-03-04 at 14 42 14" src="https://user-images.githubusercontent.com/6706325/75921437-b8c66780-5e26-11ea-9ce4-6976cb836349.png">
+
+```
+MATCH (d.donor)
+WHERE d.donor = 'Lakshmi Mittal'
+RETURN d
+```
 
 ### Fuzzy matching
 
+<img width="50" align="left" alt="Screenshot 2020-03-04 at 14 42 21" src="https://user-images.githubusercontent.com/6706325/75921823-6e91b600-5e27-11ea-8a8f-b9998e98b812.png">
+
+``` 
+MATCH (d.donor)
+WHERE d.donor =~ '.*Bamford.*'
+RETURN d
+```
+
+TEXT HERE
+
+<img width="50" align="left" alt="Screenshot 2020-03-04 at 14 42 45" src="https://user-images.githubusercontent.com/6706325/75922013-d0522000-5e27-11ea-9a6c-783a889aa645.png">
+
+```
+MATCH (d)-[t:DONATED_TO]->(r)
+WHERE d.donor =~ '.*Bamford.*'
+RETURN DISTINCT r.name, d.name
+```
+
 ### Searching by value
+
+<img width="50" align="left" alt="Screenshot 2020-03-04 at 14 42 57" src="https://user-images.githubusercontent.com/6706325/75922098-f677c000-5e27-11ea-97f3-1b2c36156555.png">
+
+```
+MATCH (d)-[t:DONATED_TO]->(r)
+WHERE t.value >= 1000000
+RETURN d
+```
 
 
 ## Further support and resources
