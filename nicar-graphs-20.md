@@ -57,8 +57,8 @@ LIMIT 10
 <img width="50"  align="left" alt="Screenshot 2020-03-04 at 14 42 14" src="https://user-images.githubusercontent.com/6706325/75921437-b8c66780-5e26-11ea-9ce4-6976cb836349.png">
 
 ```
-MATCH (d.donor)
-WHERE d.donor = 'Lakshmi Mittal'
+MATCH (d:Donor)
+WHERE d.name = 'Lakshmi Mittal'
 RETURN d
 ```
 
@@ -67,8 +67,8 @@ RETURN d
 <img width="50" align="left" alt="Screenshot 2020-03-04 at 14 42 21" src="https://user-images.githubusercontent.com/6706325/75921823-6e91b600-5e27-11ea-8a8f-b9998e98b812.png">
 
 ``` 
-MATCH (d.donor)
-WHERE d.donor =~ '.*Bamford.*'
+MATCH (d:Donor)
+WHERE d.name =~ '.*Bamford.*'
 RETURN d
 ```
 
@@ -78,7 +78,7 @@ TEXT HERE
 
 ```
 MATCH (d)-[t:DONATED_TO]->(r)
-WHERE d.donor =~ '.*Bamford.*'
+WHERE d.name =~ '.*Bamford.*'
 RETURN DISTINCT r.name, d.name
 ```
 
