@@ -97,7 +97,7 @@ This isn't particularly helpful, so now let's try searching for a donor for whom
 
 ### Exact match
 
-We start again with the `MATCH` query and use the brackets to indicate we want a donor node. The `WHERE` keyword is used for us to specify what conditions that node should meet. So here, we are saying that our donor node should have a name that exactly matches the steel magnate Lakshmi Mittal'.
+We start again with the `MATCH` query and use the brackets to indicate we want a donor node. The `WHERE` keyword is used for us to specify what conditions that node should meet. So here, we are saying that our donor node should have a name that exactly matches the steel magnate Lakshmi Mittal.
 
 <img width="50"  align="left" alt="Screenshot 2020-03-04 at 14 42 14" src="https://user-images.githubusercontent.com/6706325/75921437-b8c66780-5e26-11ea-9ce4-6976cb836349.png">
 
