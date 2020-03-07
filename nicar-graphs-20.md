@@ -65,9 +65,9 @@ Using `MERGE` instead of `CREATE`will go through each row of the CSV and look fo
 
 **Adding attributes**
 
-Data which appears in the curly brackets of our code is a property or attribute, i.e. `{ name: row.DonorName}`. To add multiple properties, do the same within the brackets separated by a comma like so: `{ name:DonorName, donorStatus: row.DonorStatus }`. These must match the column name in your data file exactly. Case matters as well. 
+Data which appears in the curly brackets of our code is a property or attribute, i.e. `{ name: row.DonorName}`. To add multiple properties, do the same within the brackets separated by a comma like so: `{ name:DonorName, donorStatus:row.DonorStatus }`. These must match the column name in your data file exactly. Case matters as well. 
 
-Finally, because we are bringing in values, we need to tell Neo4j that this attribute is a number. This way, we'll be able to use some of the more powerful functions like searching for donations over a certain amount later on. To do thisk, we type 'toInteger followed by the relevant column in brackets like so: `value:toInteger(row.Value)`
+Finally, because we are bringing in values, we need to tell Neo4j that this attribute is a number. This way, we'll be able to use some of the more powerful functions like searching for donations over a certain amount later on. To do this, we type 'toInteger' followed by the relevant column in brackets like so: `value:toInteger(row.Value)`
 
 <img width="50" align="left" alt="Screenshot 2020-03-02 at 10 39 19" src="https://user-images.githubusercontent.com/6706325/75669105-54fb3d80-5c72-11ea-80e5-c42d1b28eab7.png">
 
@@ -90,7 +90,7 @@ We're going to start very simply by asking Neo4j to find us any 10 nodes and ret
 
 ```
 MATCH (x)
-RETURN (x)
+RETURN x
 LIMIT 10
 ```
 This isn't particularly helpful, so now let's try searching for a donor for whom we know their exact name. 
