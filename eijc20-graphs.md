@@ -34,7 +34,7 @@ Let's go ahead and create our first two nodes.
 
 ``` 
 CREATE (p:Person {name:'Leila Haddou'})
-CREATE (e:Event {name:'NICAR 2020'})
+CREATE (e:Event {name:'EIJC 2020'})
 ```
 
 You have now created two nodes. Click on the symbol <img width="30" alt="Screenshot 2020-03-06 at 09 58 15" src="https://user-images.githubusercontent.com/6706325/76099692-1b3b7700-5f91-11ea-963b-8223aed059d2.png"> on the top left corner of your screen. You should now see nodes under the Node Labels section. Select the one with the star to see your newly created nodes. You may find that one is blank. That's easily changed as shown below:
@@ -49,7 +49,7 @@ We haven't yet told Neo4j that the two nodes are created in any way. To do this,
 
 ``` 
  CREATE (p:Person {name:'Leila Haddou'})
- CREATE (e:Event {name:'NICAR 2020'})
+ CREATE (e:Event {name:'EIJC 2020'})
  CREATE (p)-[r:IS_AT]->(e)
  ```
  
